@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Player Management System.</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+<div class="container" align="center">
+    <h1>Ballers A-List</h1>
+    <table class="table">
+        <thead>
+        <tr>
+            <th>Player First Name</th>
+            <th>Player Last Name</th>
+            <th>Player Email</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="player : ${listOfPlayers}">
+            <td th:text="${player.firstName}"></td>
+            <td th:text="${player.lastName}"></td>
+            <td th:text="${player.email}"></td>
+        </tr>
+        </tbody>
+    </table>
+
+</div>
+</body>
+
+</html>
